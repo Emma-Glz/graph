@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo con Plot.Ly</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+	<!--<script src="dist/plotly.min.js"></script>-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12 mt-4">
+			<p><strong>Datos requeridos</strong></p>
+		</div>
+	  <div class="col-3">
+		<form>
+			
+				<div class="form-group">
+					<label for="formGroupExampleInput">VGG o VDS</label>
+					<input type="text" class="form-control" id="formvgg" placeholder="-2">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">VDD</label>
+					<input type="text" class="form-control" id="formvdd" placeholder="16">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">RD</label>
+					<input type="text" class="form-control" id="formrd" placeholder="2e3">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">IDSS</label>
+					<input type="text" class="form-control" id="formidss" placeholder="10e-3">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Vp</label>
+					<input type="text" class="form-control" id="formvp" placeholder="-8">
+				</div>
+			<div class="form-row">
+				<div class="col">
+				<button type="button" class="btn btn-success btn-block">Enviar</button>
+				</div>
+			</div>
+		</form>	
+	  </div>
+	  <div class="col-12 col-lg">
+		<div id="line-chart"></div>
+	  </div>
+	</div>
+  </div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
