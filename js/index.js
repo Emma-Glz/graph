@@ -13,13 +13,13 @@ function dibujoGrafica(){
     console.log(xVoltaje);
     var yCorriente =parseFloat(vdd.value)/parseFloat(rd.value);
     console.log(yCorriente);
-    var numero1PruebaDefinida = parseFloat(idss.value)*Math.pow((1-(-2/-8)),2);
+    var numero1PruebaDefinida = parseFloat(idss.value)*Math.pow((1-(parseFloat(vgg.value/vp.value))),2);
     console.log(numero1PruebaDefinida)
     var vds = xVoltaje - (parseFloat(rd.value)*parseFloat(numero1PruebaDefinida));
     console.log(vds)
     //var xPunto = parseFloat(vdd.value) - id
     
-    drawGrafiph(16,8e-3,4.75,5.625e-3)
+    drawGrafiph(xVoltaje,yCorriente,vds,numero1PruebaDefinida)
 }
 
 function drawGrafiph(vdd,idmax,vds,id){
