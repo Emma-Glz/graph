@@ -2,7 +2,7 @@ var lineDiv = document.getElementById('line-chart');
 var vgg = document.getElementById('formvgg')
 var vdd = document.getElementById('formvdd')
 var rd = document.getElementById('formrd')
-var dss = document.getElementById('formdss')
+var idss = document.getElementById('formidss')
 var vp = document.getElementById('formvp')
 var button = document.getElementById('button')
 
@@ -13,7 +13,9 @@ function dibujoGrafica(){
     console.log(xVoltaje);
     var yCorriente =parseFloat(vdd.value)/parseFloat(rd.value);
     console.log(yCorriente);
-    var vds = xVoltaje - (parseFloat(rd.value)*parseFloat(5.63e-3));
+    var numero1PruebaDefinida = parseFloat(idss.value)*Math.pow((1-(-2/-8)),2);
+    console.log(numero1PruebaDefinida)
+    var vds = xVoltaje - (parseFloat(rd.value)*parseFloat(numero1PruebaDefinida));
     console.log(vds)
     //var xPunto = parseFloat(vdd.value) - id
     
